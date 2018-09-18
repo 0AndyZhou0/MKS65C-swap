@@ -13,10 +13,10 @@ int main(){
     printf("%d\n",ary[i]);
   }
   int reverse[10];
-  int * p = &ary;
+  int * aryp = &ary;
+  int * reversep = &reverse;
   for(int i = 0;i < 10;i++){
-    reverse[9-i] = *p;
-    p++;
+    *(reversep + 9 - i) = *(aryp + i);
   }
   for(int i = 0;i < 10;i++){
     printf("%d\n",reverse[i]);
